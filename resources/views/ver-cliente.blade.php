@@ -21,34 +21,31 @@
                     
                         <div class="mb-3">
                             <label for="nombre" class="form-label">DNI</label>
-                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" readonly>
+                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" value="{{$cliente->dni}}" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" readonly>
+                            <input type="text" class="form-control" id="nombre" placeholder="nombre" name="nombre" value="{{$cliente->nombre}}" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" class="form-control" id="apellido" placeholder="apellido" name="apellido" readonly>
+                            <input type="text" class="form-control" id="apellido" placeholder="apellido" name="apellido" value="{{$cliente->apellido}}" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" placeholder="telefono" name="telefono" readonly>
+                            <input type="text" class="form-control" id="telefono" placeholder="telefono" name="telefono" value="{{$cliente->telefono}}" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="correo" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="correo" placeholder="correo" name="correo" readonly>
+                            <input type="email" class="form-control" id="correo" placeholder="correo" name="correo" value="{{$cliente->correo}}" readonly>
                         </div>
         
                         <div class="mb-3">
-                            <a href="{{route('/menu')}}" class="btn btn-secondary">Volver</a>
-                        </div>        
-                    
+                            <a href="{{route('clientes')}}" class="btn btn-secondary">Volver</a>
+                        </div>             
                 </div>
             </div>
-
-        
+        </div>
     </div>
-
 </body>
 </html>

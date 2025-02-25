@@ -14,39 +14,37 @@
 <body>
     <div class="container mt-5">
         
-            <h1>Agregar nueva tarjeta</h1>
-            <div></div>
-            <div class="card" style="width: 18rem">
-                <div class="card-body">
-                    <form action="#"  method="post">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv">
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellido" class="form-label">Limite</label>
-                            <input type="text" class="form-control" id="limite" placeholder="limite" name="limite">
-                        </div>
-                        <div class="mb-3">
-                            <label for="sueldo" class="form-label">DNI-Cliente</label>
-                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni">
-                        </div>
-                        <div class="mb-3">
-                            <label for="sueldo" class="form-label">Tipo tarjeta</label>
-                            <input type="text" class="form-control" id="tipo" placeholder="Tipo de tarjeta" name="tipo">
-                        </div>
-        
-                        <div class="mb-3">
-                            <a href="#" class="btn btn-secondary">Volver</a>
-                            <button type="submit" class="btn btn-success">Guardar</button>
-                        </div>
-        
-                    </form>
-                </div>
+        <h1>Agregar nueva tarjeta</h1>
+        <div></div>
+        <div class="card" style="width: 18rem">
+            <div class="card-body">
+                <form action="{{route('guardar-tarjeta')}}"  method="post">
+                    @csrf
+                    @method('POST')
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv">
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Limite</label>
+                        <input type="text" class="form-control" id="limite" placeholder="limite" name="limite">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sueldo" class="form-label">DNI-Cliente</label>
+                        <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni">
+                    </div>
+                    <div class="mb-3">
+                        <label for="sueldo" class="form-label">Tipo tarjeta</label>
+                        <input type="text" class="form-control" id="tipo" placeholder="Tipo de tarjeta" name="tipo">
+                    </div>
+    
+                    <div class="mb-3">
+                        <a href="{{route('tarjetas')}}" class="btn btn-secondary">Volver</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
             </div>
-
-        
+        </div>  
     </div>
-
 </body>
 </html>

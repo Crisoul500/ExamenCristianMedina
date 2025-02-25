@@ -13,7 +13,7 @@
 <body>
     <div class="d-flex justify-content-between mb-3">
             
-        <a href="#" class="btn btn-primary">
+        <a href="{{route('crear-tarjeta')}}" class="btn btn-primary">
             <i class="fa-solid fa-plus"></i>
             Crear Tarjeta
         </a>
@@ -21,36 +21,40 @@
     </div>
 
     <div class="card">
-        <div class="card-header">
-          Ver Tarjetas
-        </div>
-
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tarjetas clasicas</h5>
-                  <a href="#" class="btn btn-primary">Clasicas</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tarjetas Gold</h5>
-                  <a href="#" class="btn btn-primary">Gold</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Tarjetas Platino</h5>
-                    <a href="#" class="btn btn-primary">Platino</a>
-                  </div>
-                </div>
-              </div>
-          </div>
+      <div class="card-header">
+        Ver Tarjetas
       </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tarjetas clasicas</h5>
+              <a href="{{route('cls')}}" class="btn btn-primary">Clasicas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tarjetas Gold</h5>
+              <a href="{{route('gld')}}" class="btn btn-primary">Gold</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tarjetas Platino</h5>
+              <a href="{{route('plt')}}" class="btn btn-primary">Platino</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-3">
+            <a href="{{route('menu')}}" class="btn btn-secondary">Volver</a>
+        </div>
+    </div>
 </body>
 </html>

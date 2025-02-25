@@ -14,41 +14,39 @@
 <body>
     <div class="container mt-5">
         
-            <h1>Ver tarjeta</h1>
-            <div></div>
-            <div class="card" style="width: 18rem">
-                <div class="card-body">
-                    
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Numero tarjeta</label>
-                            <input type="text" class="form-control" id="numero" placeholder="Numero Tarjeta" name="numero" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">CVV</label>
-                            <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellido" class="form-label">Limite</label>
-                            <input type="text" class="form-control" id="limite" placeholder="limite" name="limite" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="sueldo" class="form-label">DNI-Cliente</label>
-                            <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" readonly>
-                        </div>
-                        <div class="mb-3">
-                            <label for="sueldo" class="form-label">Tipo tarjeta</label>
-                            <input type="text" class="form-control" id="tipo" placeholder="Tipo de tarjeta" name="tipo" readonly>
-                        </div>
-        
-                        <div class="mb-3">
-                            <a href="#" class="btn btn-secondary">Volver</a>
-                        </div>
-        
-                    
-                </div>
+        <h1>Ver tarjeta</h1>
+        <div></div>
+        <div class="card" style="width: 18rem">
+            <div class="card-body">
+                
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Numero tarjeta</label>
+                        <input type="text" class="form-control" id="numero" placeholder="Numero Tarjeta" name="numero" value="{{$tarjeta->numeroTarjeta}}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="CVV" name="cvv" value="{{$tarjeta->cvv}}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="apellido" class="form-label">Limite</label>
+                        <input type="text" class="form-control" id="limite" placeholder="limite" name="limite" value="{{$tarjeta->limite}}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sueldo" class="form-label">DNI-Cliente</label>
+                        <input type="text" class="form-control" id="dni" placeholder="DNI" name="dni" value="{{$tarjeta->dni}}" readonly>
+                    </div>
+                    <div class="mb-3">
+                        <label for="sueldo" class="form-label">Tipo tarjeta</label>
+                        <input type="text" class="form-control" id="tipo" placeholder="Tipo de tarjeta" name="tipo" value="{{$tarjeta->tipoTarjeta}}" readonly>
+                    </div>
+    
+                    <div class="mb-3">
+                        <a href="{{route('tarjetas')}}" class="btn btn-secondary">Volver</a>
+                    </div>
+    
+                
             </div>
-
-        
+        </div>
     </div>
 
 </body>

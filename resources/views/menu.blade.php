@@ -30,7 +30,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Administracion de tarjetas</h5>
                   <p class="card-text">Administre tarjetas.</p>
-                  <a href="#" class="btn btn-primary">Tarjetas</a>
+                  <a href="{{route('tarjetas')}}" class="btn btn-primary">Tarjetas</a>
                 </div>
               </div>
             </div>

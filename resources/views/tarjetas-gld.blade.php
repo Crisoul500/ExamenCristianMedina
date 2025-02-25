@@ -13,7 +13,7 @@
 <body>
     <div class="container mt-5">
         <div class="d-flex justify-content-between mb-3">
-            <h1>¿Esta seguro de eliminar esta tarjeta?</h1>
+            <h1>Tarjetas Gold</h1>
         </div>
         
 
@@ -24,25 +24,34 @@
                     <th>cvv</th>
                     <th>Limite</th>
                     <th>Cliente</th>
-                    <th>Tipo</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach ($tarjetasGld as $tarjeta)
                 <tr>
                     <td>{{$tarjeta->numeroTarjeta}}</td>
                     <td>{{$tarjeta->cvv}}</td>
                     <td>{{$tarjeta->limite}}</td>
                     <td>{{$tarjeta->dni}}</td>
                     <td>{{$tarjeta->tipoTarjeta}}</td>
+                    <td class="action-buttons">
+                        <a href="{{route('ver-tarjeta', $tarjeta->numeroTarjeta)}}" class="btn btn-info btn-sm">
+                            Visualizar
+                        </a>
+                        <a href="{{route('eliminar-tarjeta', $tarjeta->numeroTarjeta)}}" class="btn btn-danger btn-sm">
+                            Eliminar
+                        </a>
+                    </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
 
         <div class="mb-3">
-            <a href="{{route('tarjetas')}}" class="btn btn-secondary">Cancelar</a>
-            <a href="{{route('destruir-tarjeta', $tarjeta->numeroTarjeta}}" class="btn btn-danger">Confirmar</a>
+            <a href="{{route('tarjetas')}}" class="btn btn-secondary">Volver</a>
         </div>
-
-    </div> 
+    </div>
+    
 </body>
 </html>

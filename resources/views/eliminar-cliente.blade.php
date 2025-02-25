@@ -29,22 +29,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>0801</td>
-                    <td>Juan</td>
-                    <td>Gomez</td>
-                    <td>999</td>
-                    <td>juan@correo.com</td>
+                    <td>{{$cliente->dni}}</td>
+                    <td>{{$cliente->nombre}}</td>
+                    <td>{{$cliente->apellido}}</td>
+                    <td>{{$cliente->telefono}}</td>
+                    <td>{{$cliente->correo}}</td>
                 </tr>
             </tbody>
         </table>
 
-        
         <div class="mb-3">
-            <a href="#" class="btn btn-secondary">Cancelar</a>
-            <a href="#" class="btn btn-danger">Confirmar</a>
+            <a href="{{route('clientes')}}" class="btn btn-secondary">Cancelar</a>
+            <a href="{{route('destruir-cliente', $cliente->dni)}}" class="btn btn-danger">Confirmar</a>
         </div>
 
     </div>
-
 </body>
 </html>
